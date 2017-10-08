@@ -5,7 +5,7 @@
 <html>
 
 <head>
-<title>PRS Capstone Project</title>
+<title>Requests</title>
 <link href="styles/main.css" type="text/css" rel="stylesheet"></link>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" type=text/javascript></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -30,8 +30,34 @@
 			</div>
 		</div>
 	</nav>
-<div id="background">
-</div>
+	
+			<table class="table">
+				<tr>
+					<td align =center>
+					<button type="submit" onClick="location.href='products?action=new'" class="btn btn-primary btn-block" style="font-size:16pt">New Request</button></td>
+				</tr>
+				<tr>
+					<td align=center>
+					<button type="submit" class="btn btn-warning btn-block" style="font-size:16pt">View Pending Requests</button></td>
+				</tr>
+				<tr>
+					<td align=center>
+					<button type="submit" class="btn btn-default btn-block" style="font-size:16pt">Your Request History</button></td>
+				</tr>
+				<tr>
+				<td align=center>
+				<c:if test ="${ user.reviewer == true}"> <!-- if statement to check if session user is manager -->
+					<button type="submit"  onClick="location.href='manager?action=pending'" class="btn btn-basic btn-block"  style="font-size:16pt">Pending Requests | Manager</button>
+					<button type="submit"  onClick="location.href='manager?action=history'" class="btn btn-basic btn-block"  style="font-size:16pt">Request History | Manager</button>		
+				</c:if>
+				</td>
+				</tr>
+							
+			</table>	
+	
+	
+	
+	
 	
 </body>
 

@@ -4,8 +4,9 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-<title>PRS Capstone Project</title>
+<title>Request Approved</title>
 <link href="styles/main.css" type="text/css" rel="stylesheet"></link>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" type=text/javascript></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,8 +16,8 @@
 
 <style>
 </style>
-</head>
 
+</head>
 <body>
 	<nav>
 		<div class="dropdown" style="float: right">
@@ -30,9 +31,13 @@
 			</div>
 		</div>
 	</nav>
-<div id="background">
-</div>
+	
+	<p>Approved</p>
+	
+	
+	
+	
+	
 	
 </body>
-
-<c:import url="/includes/footer.jsp" />
+</html>

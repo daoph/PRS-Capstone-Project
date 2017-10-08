@@ -4,8 +4,9 @@
 <!DOCTYPE html>
 <html>
 
+
 <head>
-<title>PRS Capstone Project</title>
+<title>Manager History</title>
 <link href="styles/main.css" type="text/css" rel="stylesheet"></link>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" type=text/javascript></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,8 +16,8 @@
 
 <style>
 </style>
-</head>
 
+</head>
 <body>
 	<nav>
 		<div class="dropdown" style="float: right">
@@ -30,9 +31,45 @@
 			</div>
 		</div>
 	</nav>
-<div id="background">
-</div>
 	
+<div style = "align: center; margin: 10px 2%">
+
+<table class = "table">
+<tr>
+<th>Request ID</th>
+<th>UserID</th>
+<th>Description</th>
+<th>Reason</th>
+<th>Shipping Method</th>
+<th>Date Needed</th>
+<th>Total</th>
+<th>SubmittedDate</th>
+<th>Status</th>
+<th>ReasonForRejection</th>
+
+</tr>
+
+<c:forEach var = "r" items = "${requests}">
+<tr>
+<td>${r.id}</td>
+<td>${r.userID}</td>
+<td>${r.description}</td>
+<td>${r.justification}</td>
+<td>${r.deliveryMode}</td>
+<td>${r.dateNeeded}</td>
+<td>${r.total}</td>
+<td>${r.submittedDate}</td>
+<td>${r.status}</td>
+<td>${r.reasonForR}</td>
+</tr>
+</c:forEach>
+
+</table>
+</div>
+
+
+
 </body>
 
 <c:import url="/includes/footer.jsp" />
+</html>

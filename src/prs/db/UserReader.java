@@ -11,5 +11,4 @@ public interface UserReader {
 	public boolean loginValidator(String username, String password);
 	
 	public User getUserObject(String username);
-
 }
